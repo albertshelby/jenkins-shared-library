@@ -1,3 +1,8 @@
-def call (){
-    sh "echo \"Hola mundo\""
+def call (String name){
+    stage("Hola mundo"){
+        agent{any}
+        steps{
+            sh "echo \"Hello ${name}\""
+        }
+    }
 }
